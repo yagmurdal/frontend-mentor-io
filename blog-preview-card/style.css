@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* Colors */
+    --yellow: #F4D04E;
+    --white: #FFFFFF;
+    --gray-950: #111111;
+    --gray-500: #6B6B6B;
+    /* Spacing */
+    --space-50: 4px;
+    --space-100: 8px;
+    --space-150: 12px;
+    --space-300: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {  
+    font-family: "Figtree", sans-serif;
+    background-color: var(--yellow);
+}
+
+.text-base {
+    color: var(--gray-950);
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+.text-sm {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.text-sm-bold {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.text-md {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.text-lg {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh; 
+}
+
+.blog-preview-card{
+    width: 80%;
+    max-width: 384px;
+    padding: var(--space-300);
+    border: 1px solid var(--gray-950);
+    border-radius: 20px;
+    background-color: var(--white);
+    box-shadow: 8px 8px 0 #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-image{
+    border-radius: 10px;
+    margin-bottom: var(--space-300);
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+}
+
+.tag{
+    font-weight: 800;
+    padding: var(--space-50) var(--space-150);
+    background-color: var(--yellow);
+    border-radius: var(--space-50);
+    width: fit-content;
+    margin-bottom: var(--space-150);
+}
+
+.publish-date{
+    margin-bottom: var(--space-150);
+}
+
+.blog-title{
+    margin-bottom: var(--space-150);
+    transition: color 0.2s ease;
+}
+
+.blog-title:hover{
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.blog-excerpt{
+    color: var(--gray-500);
+    margin-bottom: var(--space-300);
+}
+
+.author-info{
+    display: flex;
+    align-items: center;
+}
+
+.author-image{
+    width: 32px;
+    height: 32px;
+    margin-right: var(--space-150);
+}
+
+@media (max-width: 375px){
+    .tag{
+        font-size: 12px;
+    }
+    .publish-date{
+        font-size: 12px;
+    }
+    .blog-title{
+        font-size: 20px;
+    }
+    .blog-excerpt{
+        font-size: 14px;
+    }
+}
